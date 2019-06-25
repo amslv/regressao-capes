@@ -1,0 +1,20 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(scifigure)
+```
+
+```{r}
+exps <- init_experiments(2, c("Westlund & Hannon, 2008", ""))
+exps[c("experimental_design", "population", "experimenter", "analyst", "claim", "data"),2] <- "different"
+exps["code",2] <- "unobserved"
+sci_figure(exps)
+```
+
